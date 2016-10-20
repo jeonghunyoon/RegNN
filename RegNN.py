@@ -66,7 +66,7 @@ class RegNN(object):
 
         # backward pass
         # in output layer
-        # TODO 한 번 더 체크해야 한다. output layer의 activation 함수!
+        # output layer의 activation 함수: linear function for regression
         delta = self.cost_derivatives(activations[-1], y)
         nabla_b[-1] = delta
         nabla_w[-1] = np.dot(delta, activations[-2].transpose())
