@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import random
-
 import numpy as np
-
 
 class RegNN(object):
     # input_list : an input list containing the node number of each layer. ex, [10, 5, 6]
@@ -78,8 +76,6 @@ class RegNN(object):
             delta = np.dot(self.weights[-l + 1].T, delta) * sp
             nabla_b[-l] = delta
             nabla_w[-l] = np.dot(delta, activations[-l - 1].T)
-
-            a = [1,2,3]
 
         return (nabla_b, nabla_w)
 
